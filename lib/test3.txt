@@ -1,0 +1,20 @@
+StreamBuilder(
+                  stream: eventos.getEventByIdStream(qrData),
+                  builder: (context, snapshot) {
+                    if (snapshot.hasData) {
+                      final data = snapshot.data!.data() as Map<String, dynamic>;
+                      return Column(
+                        children: [
+                          Text(data['nombre'] + ': ' + data['fecha'], style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Theme.of(context).colorScheme.primary),),
+                          const SizedBox(height: 10,),
+                          SizedBox(height: 300, child: ListaInvitadosScreen(id: qrData)),
+                          const SizedBox(height: 20,),
+                        ],
+                      );
+                    } else if (snapshot.hasError) {
+                      return Text('Error: ${snapshot.error}');
+                    } else {
+                      return Container();
+                    }
+                  },
+                )

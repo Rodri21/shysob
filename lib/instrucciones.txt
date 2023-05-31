@@ -1,0 +1,47 @@
+Para la elaboración de esta práctica el alumno deberá implementar las siguientes funcionalidades en su desarrollo:
+
+Definir un proyecto enfocado a una problemática en el mundo real
+Determinar el objetivo general 
+Definir alcance de la práctica de acuerdo a la problemática definida
+Integrar los siguientes servicios de Firebase 
+Storage
+Almacenamiento de imagenes o video o cualquier otro recurso necesario para la app
+Database
+Notifications
+Las notificaciones se enviarán desde firebase, por lo cual no es necesario generar un backend para esto.
+Las notificaciones se deberán poder escuchar en cualquier pantalla de la aplicación.
+La app podrá suscribirse a un tema de interes dentro de la app.
+Considere las siguientes situaciones para poder recibir notificaciones
+Cuando la app esta cerrada
+Cuando la app esta en segundo plano
+Cuando la app esta en primer plano
+Authentication (Permitir hacer login con cualquiera de los siguiente proveedores) 
+Proveedores de autenticación
+Google
+Facebook
+GitHub
+Authenticacion via correo electrónico, previa validación del mismo.
+Esquema de recuperación de contraseña
+Esquema para reenviar confirmacion de cuenta al correo
+Una vez autenticado el usuario, se muestren los datos en un pantalla de perfil, donde se pueda visualizar el avatar del proveedor utilizado.
+Actualice entonces el avatar del perfil y del dashboard en caso de tener uno.
+Solo se podrá actualizar la foto en caso de haberse autenticado con correo electrónico.
+Utilizar cualquiera de las siguientes alternativas para el manejo de estados (No usar SetState)
+Provider
+GetX
+Riverpod
+Bloc
+Configurar nuevas fuentes para los textos.
+Considerar el cambio de tema para el color.
+Implementar un onboarding para presentar su app.
+Considere la adaptabilidad a diferentes pantallas (Celular y Escritorio).
+Implementar nuevos Widgets diferentes a los usados en el curso(10% de la calificación).
+Implemente la libreria DIO para manejar las peticiones http con cache, asi si no se tiene conexión a internet se puedan visualizar los datos.
+Si trabaja con imagenes estas tambien deberán poder visualizarse si no hay conexión a internet.
+Consideraciones de Evaluación:
+
+Reporte de práctica con los puntos iniciales del proyecto, desarrollo y conclusiones
+Entrega en tiempo y forma (-20% entrega a destiempo)
+Repositorio GitHub
+Libre de errores (-20% de penalización)
+Entregar funcionando el proyecto al profesor

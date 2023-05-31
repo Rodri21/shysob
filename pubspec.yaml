@@ -1,0 +1,44 @@
+name: shysob
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  firebase_auth: ^4.3.0
+  firebase_core: ^2.8.0 
+  cloud_firestore: ^4.5.2
+  social_login_buttons: ^1.0.7
+  google_sign_in: ^6.1.0
+  google_maps_flutter: ^2.2.6
+  cupertino_icons: ^1.0.2
+  path_provider: ^2.0.0
+  table_calendar: ^3.0.8
+  http: ^0.13.5
+  flutter_native_timezone: ^2.0.0
+  qr_flutter: ^4.1.0
+  screenshot: ^1.3.0 
+  flutter_share: ^2.0.0
+  share_plus: ^7.0.1
+  esys_flutter_share_plus: ^2.2.0
+  image: ^4.0.17
+  qr_code_scanner: ^1.0.1
+  google_fonts: ^4.0.4
+  shared_preferences: ^2.1.1
+  flutter_riverpod: ^2.3.6
+  image_picker: ^0.8.7+5
+  firebase_storage: ^11.2.1
+  firebase_messaging: ^14.6.1
+  introduction_screen: ^3.1.8
+ 
+flutter:
+  uses-material-design: true

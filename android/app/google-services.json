@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "112155657556",
+    "project_id": "shysob-713ec",
+    "storage_bucket": "shysob-713ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112155657556:android:b1a0ae7c663a268e4034c1",
+        "android_client_info": {
+          "package_name": "com.example.shysob"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112155657556-0mpglbrms9umd1ouvtrigj21qqvbct8k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shysob",
+            "certificate_hash": "fbf8d6f36187e341e380ed88b727da0ee8c18704"
+          }
+        },
+        {
+          "client_id": "112155657556-cp0lc5013ql5cdad63vlkdu5vip4urtj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFQ4L1ml9Z1soS-Ke-dA6NRT4mBUo_Xt0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112155657556-cp0lc5013ql5cdad63vlkdu5vip4urtj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

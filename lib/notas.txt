@@ -1,0 +1,128 @@
+********************************************************************
+
+Bases de datos:
+	colonosHabilitados: Para que un nuevo colono se pueda registrar
+		- correo
+		- tipo
+	colonos:
+		- correo
+		- nombre
+		- direccion
+		- contraseña
+	vigilante:
+		- nombre
+		- correo
+		- zona
+	admin:
+		- nombre 
+		- correo
+		- zona
+	evento:
+		- direccion
+		- hora
+		- invitados{nombre}
+	rondin:
+		- hora
+		- zona
+		- foto
+		- vigilante
+
+Usuarios: vigilante, admin, colono
+
+Pantalla 1: Login
+	Solo se puede loggear si esta registrado
+
+Pantalla 2: Registrar
+	Solo se puede registrar si su correo esta en colonosHabilitados y si coincide el tipo. Se elige el tipo para que muestre zona o direccion dependiendo el tipo, 
+	se registra en automatico el tipo segun el campo tipo de colonosHabilitados
+
+Pantalla colono: Administrar evento
+	AGREGAR:
+	Lista de nombres
+	Fecha y hora
+	Boton agregar
+
+	MODIFICAR:
+
+Pantalla vigilante: Registrar rondin
+	Tomar una foto y guardar la foto en la base de datos. El nombre sera la fecha y hora
+
+Pantalla vigilante: Atender evento
+	Mostrar cbo de zonas. Desplegar eventos por zona. Al seleccionar una zona, mostrar lista de invitados.
+
+Pantalla admin: Agregar colonos
+
+**********************************************************************
+
+En sesion de cliente:
+Agregar un campo 'visitaIndividual' booleano. 
+
+En evento, al hacer clic en Guardar evento, obtener antes el id del documento y llamar a metodo generaQR(idDocumento). Se va a generar un qr con el id del documento.
+Tambien agregar el registro del campo 'visitaIndividual' como false.
+Al generar el qr, se podra elegir el metodo de compartir (whatsapp, gmail) o bien guardar imagen en el telefono.
+Agregar al menu un Agregar visita que mande a agregar_visita_screen.dart
+AgregarVisitScreen que solo tenga el campo de 'Nombre de visitante', 'fecha' y boton agregar visita. Agregar visita funcionara de la misma manera que agregar evento pero
+solo agregaria esos 3 campos (nombre, fecha, visitaIndividual=true).
+
+En sesion de vigilante:
+En pantalla AtenderEventoScreen, mostrar un boton para escanear qr, y abajo una lista que estara de momento vacia.
+Al escanear el qr, obtener el id. A partir del id, realizar consulta de la fecha del evento. Si la fecha del evento es diferente de hoy, 
+mostrar un mensaje de que la fecha de tal evento o de tal visitaesta programada para el dia tal. Si la fecha esta bien, 
+hacer la consulta en base al id que se seleccionó unicamente del campo 'visitaIndividual'. Si es false, obtener la lista de todos los invitados. Si es true, obtener solo 'nombre'.
+Mostrar widget con la lista de invitados debajo del boton.
+
+Opcional:
+Al mapa de datos invitados, agregar campo id y campo asistencia(tipo hora).
+Con un checkbox a su derecha. Boton abajo que diga registrar. Al registrar actualizar campo, actualizar el campo asistencia. 
+Al mostrar la lista de invitados, verificar la asistencia de cada invitado. Los que ya tienen su campo 'asistencia' marcado, apareceran tachados o en rojo.
+
+
+*********************************************************
+
+FALTA IMPLEMENTAR
+
+/ Cerrar sesion
+
+--* Authentication: Via correo electronico con validacion
+--* Recuperacion de contraseña
+--* Esquema para reenviar confirmacion de cuenta al correo
+
+/ Storage (para fotos de perfil)
+/ Foto de perfil actualizable
+--* Solo se puede actualizar la foto si se autentico con correo
+
+* Notifications(Invitado X llego)
+
+--* Modificar colores de los snackbar
+
+/ Quitar los setState para el manejo de estados, implementar riverpod
+/ Usar nuevas fuentes para textos
+/ Implementar temas
+
+/ Implementar onBoarding
+* Responsive
+
+* Usar libreria dio para peticiones http con cache, para que si no hay internet se visualicen los datos
+* Si hay imagenes que se visualicen con cache
+
+
+
+********************************************************
+
+PROYECTO: Storage
+
+/ Asignar automaticamente el nombre de la imagen con el correo del usuario
+/ Al iniciar, verificar si tiene foto. Si tiene foto mostrarla, si no, mostrar la foto de google
+/ Al seleccionar imagen, verificar si ya tiene foto. Si no tiene asignar, si ya tiene reemplazar. Preguntar antes si desea cambiar su foto de perfil 
+/ Al cargar una imagen, llamar al metodo avatar() para actualizar la imagen
+
+/ Implementar en pantalla de vigilante
+
+*********************************************************
+
+PROYECTO ACTUAL: Notifications
+
+* Al llegar un invitado, mandar notificacion al colono
+
+
+
